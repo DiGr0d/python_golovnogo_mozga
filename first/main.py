@@ -7,7 +7,7 @@ second = -1
 secondname = ''
 third = -1
 thirdname = ''
-last = 0
+last = float('inf')
 for j in range(n):
     name = input()
     sum = 0
@@ -42,14 +42,14 @@ for j in range(n):
         last = sum
 average /= n
 if flag is True:
-    first, second, third = map(lambda x : round(x / q * 100), [first, second, third])
+    first, second, third, last = map(lambda x: round(x / q * 100), [first, second, third, last])
     print(round(first), round(average), round(last))
     print(f"{firstname} {first}%")
     print(f"{secondname} {second}%")
     print(f"{thirdname} {third}%")
     if average <= 50:
-        print("курс усваивается плохо")
+        print("Курс усваивается плохо")
     else:
-        print("курс усваивается хорошо")
+        print("Курс усваивается хорошо")
 else:
     print("Во введённых данных ошибка")
